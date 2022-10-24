@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+	background: #f2f2f2;
+	font-family: 'Lato', sans-serif;
+}
+.container {
+	width: 60%;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #fff;
+	margin: 50px auto;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.container nav {
+	display: flex;
+	border-bottom: 1px solid #ccc;
+}
+
+.container nav > div {
+	flex: 1;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+
+.container nav > div.selected {
+	border-bottom: 4px solid orange;
+}
+
+.container > div {
+	padding: 10px;
+}
+
+.container > div input[type="text"], 
+.container > div input[type="password"],
+.container > div input[type="email"],
+.container > div input[type="number"] {
+	width: 100%;
+	border: 2px solid #ccc;
+	padding: 10px;
+	margin: 5px 0;
+	box-sizing: border-box;
+	outline: none;
+	border-radius: 3px;
+	font-size: 14px;
+	transition: all 0.3s;
+}
+
+.container > div input[type="text"].error, 
+.container > div input[type="password"].error,
+.container > div input[type="email"].error,
+.container > div input[type="number"].error {
+	border-color: red;
+}
+
+.container > div input[type="text"]:valid, 
+.container > div input[type="password"]:valid,
+.container > div input[type="email"]:valid,
+.container > div input[type="number"]:valid {
+	border-color: green;
+}
+
+.container > div input:focus {
+	border-color: orange;
+}
+
+.container > div > div {
+	margin-top: 20px;
+}
+
+.container button {
+	background: orange;
+	width: 100%;
+	padding: 15px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	transition: 0.3s;
+}
+
+.container button:hover {
+	opacity: 0.9;
+}
+
+#login {
+	display: none;
+}
+
+.login-form > div {
+	margin-top: 40px;
+}
+
+#signup.show {
+	display: block;
+}
+
+.remember-me {
+	display: flex;
+	align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	position: relative;
+	outline: none;
+}
+
+.remember-me input[type="checkbox"]:before {
+	content: "";
+	width:16px;
+	height: 16px;
+	display: block;
+	border: 2px solid #ccc;
+	border-radius: 3px;
+}
+
+.remember-me input[type="checkbox"]:after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.remember-me input[type="checkbox"]:checked:after {
+	background: orange;
+}
+
+.msg-error {
+	color: red;
+	display: none;
+}
+
+.msg-error.show {
+	display: block;
+}
